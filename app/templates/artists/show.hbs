@@ -1,0 +1,49 @@
+<style type="text/css">
+	.album {
+		margin: 10px;
+		min-height: 200px;
+	}
+
+	.album img {
+		padding-top: 5px;
+	}
+
+	.album img:hover {
+		padding-top: 0;
+	}
+
+	.title {
+		margin-bottom: 20px;
+	}
+
+	h2, p {
+		cursor: default;
+	}
+</style>
+
+<div class="main">
+	<div class="container">
+		<div class="row">
+		<div>
+			<h4>{{#link-to "artists.index" class="pull-right"}}All artists{{/link-to}}</h4>
+		</div>
+			<div class="col-md-6 col-md-offset-3">
+				<h2 class="title"><small>Albums:</small> {{model.artist.name}}</h2>
+			</div>
+			
+		</div>
+		
+		
+		
+		{{#each model.albums as |album|}}
+		<div class="col-md-2 col-sm-3 text-center">
+			<div class="album">
+				<img src="{{album.artwork_url_100}}" alt="Album placeholder">
+				<p><{{album.name}}</p>
+			</div>
+			
+		</div>
+		{{/each}}
+
+	</div>
+</div>
