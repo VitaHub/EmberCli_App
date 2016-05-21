@@ -41,7 +41,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.apiURL = 'http://simple-rails-api.herokuapp.com/';
+    ENV.apiURL = 'https://simple-rails-api.herokuapp.com/';
   }
 
   return ENV;
