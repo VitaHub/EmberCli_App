@@ -20,7 +20,7 @@
 				<h2 class="text-center">Artists</h2>
 				<ol class="list-group">
 				    {{#each model as |artist|}}
-				    <a href="/{{artist.id}}">
+				    <a href="/{{artist.itunes_id}}">
 				    	<li class="list-group-item clearfix">
 				    		<h5 class="pull-right"><small>itunes id:</small> {{artist.itunes_id}}</h5> 
 				    		<h4 class="name">{{artist.name}}</h4> 
